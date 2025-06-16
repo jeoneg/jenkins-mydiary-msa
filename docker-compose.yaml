@@ -33,10 +33,8 @@ services:
    - rolling-be-db 
    - rolling-fe-be 
    
- mydiary-front: 
-  build:
-   context: .
-   dockerfile: Dockerfile 
+ mydiary-front:
+  image: mydiary-front:2.0 
   container_name: rolling-front 
   restart: always 
   depends_on: 
