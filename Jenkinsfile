@@ -6,7 +6,7 @@ node {
 	}
 
 	stage('Build image') {
-		sh 'docker build --platform linux/amd64 -t wjsyuwls/mydiary-front:2.0 .'
+		sh 'docker build -t wjsyuwls/mydiary-front:2.0 .'
 	}
 
 	stage('Push image') {
