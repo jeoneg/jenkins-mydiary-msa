@@ -1,6 +1,6 @@
 services: 
  mydiary-db: 
-  image: mysql:5.7-debian 
+  image: mysql 
   container_name: rolling-db 
   environment: 
    MYSQL_ROOT_PASSWORD: pass123 
@@ -17,10 +17,8 @@ services:
    - --character-set-server=utf8 
    - --collation-server=utf8_general_ci 
  
- mydiary-back: 
-  build:
-   context: ./my-diary-back
-   dockerfile: Dockerfile 
+ mydiary-back:
+  image: mydiary-back:1.0  
   container_name: rolling-server 
   restart: always 
   depends_on: 
@@ -37,7 +35,7 @@ services:
    
  mydiary-front: 
   build:
-   context: ./my-diary-front
+   context: .
    dockerfile: Dockerfile 
   container_name: rolling-front 
   restart: always 
