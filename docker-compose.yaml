@@ -34,7 +34,7 @@ services:
    - rolling-fe-be 
    
  mydiary-front:
-  image: mydiary-front:2.0 
+  image: wjsyuwls/mydiary-front:2.0 
   container_name: rolling-front 
   restart: always 
   depends_on: 
