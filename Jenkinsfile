@@ -6,7 +6,7 @@ node {
 	}
 
 	stage('Build image') {
-		dockerImage = docker.build("leecloudo/mydiary-front:2.0")
+		dockerImage = docker.build("wjsyuwls/mydiary-front:2.0")
 	}
 
 	stage('Push image') {
